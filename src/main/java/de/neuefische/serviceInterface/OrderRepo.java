@@ -1,8 +1,6 @@
-package de.neuefische.Repo;
+package de.neuefische.serviceInterface;
 import de.neuefische.model.Order;
-
 import java.util.List;
-
 
 public interface OrderRepo {
     List<Order> getOrders();

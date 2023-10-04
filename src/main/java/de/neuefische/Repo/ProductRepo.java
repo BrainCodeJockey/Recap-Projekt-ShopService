@@ -1,6 +1,7 @@
-package de.neuefische;
+package de.neuefische.Repo;
+import de.neuefische.model.Product;
+
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 
@@ -44,16 +45,4 @@ public class ProductRepo {
         if (productToRemove != null)
             products.remove(productToRemove);
     }
-
-
-//    public void removeProduct(String id) {
-//        Iterator<Product> iterator = products.iterator();
-//        while (iterator.hasNext()) {
-//            Product product = iterator.next();
-//            if (product.id().equals(id)) {
-//                iterator.remove();
-//                return;
-//            }
-//        }
-//    }
 }
