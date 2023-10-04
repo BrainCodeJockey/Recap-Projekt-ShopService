@@ -7,7 +7,14 @@ import de.neuefische.serviceInterface.OrderRepo;
 import de.neuefische.serviceInterface.ShopService;
 import java.util.List;
 
+
+
+
 public class Main {
+
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_RESET = "\u001B[0m";
+
     public static void main(String[] args) {
         List<Product> initialProducts = List.of(
                 new Product("1", "Katze", 12.45),
@@ -21,9 +28,10 @@ public class Main {
         ShopService shopService = new ShopService(productRepo, orderMapRepo);
 
         // Produkte testen
+
         System.out.println("Initial products:");
         productRepo.getProducts().forEach(product -> {
-            System.out.println("- " + product);
+            System.out.println(ANSI_GREEN + "- " + product + ANSI_RESET);
         });
 
         productRepo.addProduct(new Product("4", "Hund", 1.50));
